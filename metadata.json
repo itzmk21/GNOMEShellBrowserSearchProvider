@@ -1,0 +1,8 @@
+{
+  "uuid": "BrowserSearchProvider@mepowerleo10.github.io",
+  "name": "Browser Search Provider",
+  "description": "Adds a search provider to Open links, Search Google, and DuckDuckGo.",
+  "version": 1,
+  "shell-version": ["44", "45", "46", "47"],
+  "url": "https://github.com/mepowerleo10/GNOMEShellBrowserSearchProvider"
+}
