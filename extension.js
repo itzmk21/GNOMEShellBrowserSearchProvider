@@ -34,6 +34,24 @@ class ChromeSearchProvider {
                     return `https://duckduckgo.com/?q=${encodeURIComponent(query)}`;
                 }
             },
+            'bing': {
+                name: 'Search Bing',
+                description: 'Search online with Bing',
+                icon: 'web-browser-symbolic',
+                getQuery: function (terms) {
+                    const query = terms.slice(1).join(" ");
+                    return `https://www.bing.com/search?q=${encodeURIComponent(query)}`;
+                }
+            },
+            'youtube': {
+                name: 'Search YouTube',
+                description: 'Search online with YouTube',
+                icon: 'web-browser-symbolic',
+                getQuery: function (terms) {
+                    const query = terms.slice(1).join(" ");
+                    return `https://www.youtube.com/results?search_query=${encodeURIComponent(query)}`;
+                }
+            },
         };
     }
 
@@ -200,6 +218,15 @@ class ChromeSearchProvider {
         switch (terms[0]) {
             case 'd':
                 identifiers.push('duckduckgo');
+                break;
+            case 'b':
+                identifiers.push('bing');
+                break;
+            case 'y':
+                identifiers.push('youtube');
+                break;
+            case 'g':
+                identifiers.push('google');
                 break;
             default:
                 identifiers.push('google')
